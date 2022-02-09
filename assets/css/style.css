@@ -30,6 +30,7 @@ main {
     flex-direction: column;
 }
 
+/*I think i dont want to float, but something else here */
 h2 {
     float: left;
     position: relative;
@@ -37,18 +38,48 @@ h2 {
     padding: .75em;
 }
 
+
+/*about me section*/
+
 #aboutme {
     flex-flow: column wrap;
 }
 
+
+/*My work section */
+
 #mywork {
-    flex-flow: row wrap;
+    flex: 0 0 25%;
+    flex-direction: row wrap;
+}
+
+.project img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+
+/* Contact me section */
+
+#contactme {
+    display: flex;
+    align-items: center;
 }
 
 #contactme li {
     display: inline;
+    margin: 0 auto;
 }
 #contactme li a {
     text-decoration: none;
-    position: relative;
+    color: black;
+    font-weight: bold;
+    }
+
+footer {
+    background-color: #6667AB;
+    color: floralwhite;
+    text-align: right;
+    padding: .75em;
 }
