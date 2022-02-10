@@ -43,21 +43,25 @@ h2 {
 
 #aboutme {
     flex-flow: column wrap;
+    align-items: center;
 }
 
 
 /*My work section */
 
 #mywork {
-    flex: 0 0 25%;
-    flex-direction: row wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.project img {
-    width: 100%;
-    min-width: 100px;
-    max-width: 300px;
+#mywork .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
+
 
 
 /* Contact me section */
@@ -65,12 +69,20 @@ h2 {
 #contactme {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+   }
+
+#contactme ul {
+    display: flex;
+    justify-content: space-around;
+  
 }
 
 #contactme li {
-    display: inline;
-    margin: 0 auto;
+    display: flex;
+    padding: .75em;
 }
+
 #contactme li a {
     text-decoration: none;
     color: black;
