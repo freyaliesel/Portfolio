@@ -2,6 +2,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     max-width: 100vw;
+    }
+
+body {
+  background-color: floralwhite;
 }
 
 header {
@@ -36,14 +40,18 @@ h2 {
   color: #6667ab;
   padding: 0.75rem;
   text-align: right;
+  font-size: 30px;
   flex: 0 0 20%;
+}
+
+section {
+  display: flex;
+  align-items: center;
 }
 
 /*about me section*/
 #aboutme {
-  display: flex;
-  align-items: center;
-  border: black solid 2px;
+  border: black solid 4px;
 }
 
 #aboutme .container {
@@ -57,8 +65,6 @@ h2 {
 
 /*My work section */
 #work {
-  display: flex;
-  align-items: center;
   border: red solid 2px;
 }
 
@@ -72,41 +78,43 @@ h2 {
 }
 
 #work .container .project {
-    border: #bac89c solid 2px;
-    }
+  border: #bac89c solid 2px;
+}
 
 #work .container #heroproject {
-    flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 #work .container .project {
-    flex: 1 1 50%;
+  flex: 1 1 50%;
 }
 
 #work .container img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Contact me section */
 #contactme {
-  display: flex;
-  align-items: center;
   border: green solid 2px;
 }
 
 #contactme .container {
+  width: 100%;
   border-left: #6667ab solid 3px;
   margin: 1rem 5rem 1rem 0;
-}
+  display: flex;
+  }
 
 #contactme ul {
+  width: 100%;
   display: flex;
-  border: yellow solid 3px;
-  }
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 
 #contactme li {
   padding: 0.75rem;
-}
+ }
 
 #contactme li a {
   text-decoration: none;
@@ -121,43 +129,47 @@ footer {
   padding: 0.75rem;
 }
 
-/* Medium screens 
-@media all and (max-width: 900px) {
-} */
+/* Media querys for responsive design */
+
+/*Medium screens */
+@media all and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    }
+
+  nav li {
+    margin: 0.5rem;
+  }
+}
 
 /* Small screens */
 @media all and (max-width: 600px) {
-  h1 {
-      text-align: center;
-  }  
-  nav {
-    flex-direction: column;
-  }
-  nav li {
-    display: inline;
-    margin: .5rem;
+  h1, h2 {
+    text-align: center;
   }
   main {
-      flex-flow: column wrap;
+    flex-flow: column wrap;
   }
+
   #aboutme {
-      margin: 0;
-      padding: 0;
-      flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+    flex-flow: column wrap;
   }
   #aboutme .container {
-      padding: 0;
-      border-left: 0;
-    }
+    padding: 0;
+    border-left: 0;
+  }
   #work {
-      flex-flow: column wrap;
+    flex-flow: column wrap;
   }
   #work .container {
     border: 0;
   }
 
   #contactme {
-     flex-flow: column wrap;
+    flex-flow: column wrap;
   }
 
   #contactme .container {
@@ -165,6 +177,13 @@ footer {
   }
 
   #contactme ul {
-      flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+}
+
+/* Very small screens */
+@media all and (max-width: 300px) {
+  nav li {
+    margin: .25rem;
   }
 }

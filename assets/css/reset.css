@@ -23,7 +23,9 @@ footer, header, hgroup, menu, nav, section {
 	line-height: 1;
 } */
 ol, ul {
+	display: inline;
 	list-style: none;
+	padding: 0;
 }
 blockquote, q {
 	quotes: none;
