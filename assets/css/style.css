@@ -36,6 +36,7 @@ h2 {
   color: #6667ab;
   padding: 0.75rem;
   text-align: right;
+  flex: 0 0 20%;
 }
 
 /*about me section*/
@@ -72,8 +73,7 @@ h2 {
 
 #work .container .project {
     border: #bac89c solid 2px;
-    
-}
+    }
 
 #work .container #heroproject {
     flex: 1 1 100%;
