@@ -40,6 +40,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 1rem 0;
 }
 h1 {
   font-size: 45px;
@@ -78,7 +79,7 @@ section .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
- }
+  }
 
 #work .container .project {
   border: var(--accent) solid 2px;
@@ -98,26 +99,27 @@ section .container {
 
 /* Contact me section */
 #contactme .container {
-  width: 100%;
   display: flex;
+  flex-grow: 1;
   }
 
 #contactme ul {
-  width: 100%;
   display: flex;
+  flex-grow: 1;
   flex-flow: row wrap;
   justify-content: space-around;
-}
+ }
 
 #contactme li {
   padding: 0.75rem;
+  border-bottom: var(--main) solid 2.5px;
  }
 
 #contactme li a {
   text-decoration: none;
-  color: black;
+  color: var(--main);
   font-weight: bold;
-}
+  }
 
 footer {
   background-color: var(--main);
@@ -128,23 +130,19 @@ footer {
 }
 
 
-
 /* Media querys for responsive design */
 
 /*Medium screens */
-@media all and (max-width: 750px) {
+@media all and (max-width: 700px) {
   nav {
     flex-direction: column;
     align-items: center;
     }
-
+  
   nav li {
     margin: 0.5rem;
   }
-}
 
-/* Small screens */
-@media all and (max-width: 600px) {
   h1, h2 {
     text-align: center;
   }
@@ -166,12 +164,16 @@ footer {
     text-align: left;
   } 
 
+  #contactme ul {
+    align-items: center;
+  }
+
   footer {
     justify-content: center;
   }
 }
 
-/* Very small screens */
+/* Small screens */
 @media all and (max-width: 300px) {
   nav li {
     margin: .25rem;
