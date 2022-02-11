@@ -1,3 +1,9 @@
+:root {
+  --main: #6667ab;
+  --accent: #bac89c;
+  --light: #fffaf0;
+}
+
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -5,16 +11,16 @@
     }
 
 body {
-  background-color: floralwhite;
+  background-color: var(--light);
 }
 
 header {
-  background-color: #bac89c;
+  background-color: var(--accent);
   padding: 0.75rem;
 }
 
 nav {
-  background-color: #6667ab;
+  background-color: var(--main);
   display: flex;
   justify-content: end;
 }
@@ -26,7 +32,7 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: floralwhite;
+  color: var(--light);
   font-weight: bold;
 }
 
@@ -35,13 +41,20 @@ main {
   flex-direction: column;
   width: 100%;
 }
+h1 {
+  font-size: 45px;
+}
 
 h2 {
-  color: #6667ab;
+  color: var(--main);
   padding: 0.75rem;
   text-align: right;
   font-size: 30px;
   flex: 0 0 20%;
+}
+
+h3 {
+  font-size: 14px;
 }
 
 section {
@@ -50,24 +63,16 @@ section {
 }
 
 section .container {
-  border-left: #6667ab solid 4px;
+  border-left: var(--main) solid 4px;
   margin: 1rem 5rem 1rem 0;
 }
 
-/*about me section*/
-#aboutme {
-  border: black solid 4px;
-}
-
+/* About me section */
 #aboutme .container p {
   padding-left: 2rem;
 }
 
-/*My work section */
-#work {
-  border: red solid 2px;
-}
-
+/* My work section */
 #work .container {
   padding-left: 2rem;
   display: flex;
@@ -76,7 +81,7 @@ section .container {
  }
 
 #work .container .project {
-  border: #bac89c solid 2px;
+  border: var(--accent) solid 2px;
 }
 
 #work .container #heroproject {
@@ -92,10 +97,6 @@ section .container {
 }
 
 /* Contact me section */
-#contactme {
-  border: green solid 2px;
-}
-
 #contactme .container {
   width: 100%;
   display: flex;
@@ -119,16 +120,19 @@ section .container {
 }
 
 footer {
-  background-color: #6667ab;
-  color: floralwhite;
-  text-align: right;
+  background-color: var(--main);
+  color: var(--light);
   padding: 0.75rem;
+  display: flex;
+  justify-content: end;
 }
+
+
 
 /* Media querys for responsive design */
 
 /*Medium screens */
-@media all and (max-width: 700px) {
+@media all and (max-width: 750px) {
   nav {
     flex-direction: column;
     align-items: center;
@@ -148,13 +152,22 @@ footer {
     flex-flow: column wrap;
   }
 
-  #aboutme {
-    margin: 0;
-    padding: 0;
-    }
- 
   section .container {
     border-left: 0;
+    margin: 1.5rem;
+  }
+
+  #aboutme, #aboutme .container p {
+    margin: 0;
+    padding: .25rem;
+    }
+ 
+  #aboutme .container p {
+    text-align: left;
+  } 
+
+  footer {
+    justify-content: center;
   }
 }
 
