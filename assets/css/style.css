@@ -2,7 +2,10 @@
   --main: #6667ab;
   --accent: #bac89c;
   --light: #fffaf0;
-}
+  --ratio: 16 / 5;
+  --mobileratio: 5/2;
+  --imgborder: 3rem;
+  }
 
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -48,19 +51,19 @@ main {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: calc(1.2em + 3vw);
 }
 
 h2 {
   color: var(--main);
   padding: 0.75rem;
   text-align: right;
-  font-size: 30px;
+  font-size: calc(1.2em + 1.5vw);
   flex: 0 0 20%;
 }
 
 h3 {
-  font-size: 14px;
+  font-size: calc(0.8em + 0.5vw);
 }
 
 section {
@@ -82,15 +85,16 @@ section {
   align-items: center;
 }
 
-#aboutme img {
+#profileimage {
   max-width: 300px;
   border: var(--accent) solid 0.5rem;
-  border-radius: 20%;
+  border-radius: var(--imgborder);
   flex-shrink: 1;
 }
 
 /* My work section */
-#work .container, #work a {
+#work .container,
+#work a {
   flex-grow: 1;
   flex-flow: row wrap;
 }
@@ -100,24 +104,26 @@ section {
   justify-content: space-evenly;
 }
 
-#work .project {
+.project {
   display: flex;
-  border: var(--accent) solid 3px;
+  flex: 1 1 45%;
+  object-fit: cover;
+  border: var(--accent) solid .5rem;
+  border-radius: var(--imgborder);
+  overflow: hidden;
+  position: relative;
 }
+
 
 #heroproject.project {
   flex: 1 1 100%;
 }
 
-.project {
- flex: 1 1 45%;
- 
-}
-
 #work img {
   width: 100%;
+  aspect-ratio: var(--ratio);
   object-fit: cover;
-}
+  }
 
 /* Contact me section */
 #contactme .container {
@@ -129,18 +135,17 @@ section {
   flex-grow: 1;
   flex-flow: row wrap;
   justify-content: space-evenly;
- }
+}
 
 #contactme li {
   padding: 0.125rem 0.5rem;
   margin: 0.375rem 0rem;
-  border-bottom: var(--main) solid 0.125rem;
 }
 
 #contactme li a {
   text-decoration: none;
   color: var(--main);
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 footer {
@@ -151,7 +156,7 @@ footer {
   justify-content: end;
 }
 
-/* Media querys for responsive design */
+/* Media queries for responsive design */
 
 /*Medium screens */
 @media all and (max-width: 1007px) {
@@ -170,7 +175,7 @@ footer {
   }
 
   h2 {
-    margin: 0;
+    margin: 1.5rem 0 0 0;
     padding: 0.75rem 2rem 0.5rem 2rem;
   }
 
@@ -178,29 +183,29 @@ footer {
   #aboutme,
   #work,
   #contactme,
-  #contactme .container {
+  .container {
+    margin: 0;
+  }
+
+  #aboutme,
+  #work,
+  #contactme {
     flex-flow: column wrap;
   }
 
   .container {
+    margin-top: 1.5rem;
     border-left: 0;
     padding-left: 0;
-    margin: 0.25rem 1.5rem 1.5rem 1.5rem;
-    position: relative;
+    flex-grow: 1;
   }
 
-  .container:before {
-    content: "";
-    position: absolute;
-    left: 2rem;
-    top: -0.75rem;
-    height: 1rem;
-    width: 90%;
-    border-bottom: var(--main) solid 4px;
+  #profileimage {
+    margin: 0 1.5rem 1.5rem 1.5rem;
   }
 
-  section img {
-    margin: 1.5rem;
+  #aboutme p {
+    margin: 0.5rem 2rem;
   }
 
   #contactme ul {
@@ -220,5 +225,35 @@ footer {
 @media all and (max-width: 600px) {
   nav li {
     margin: 0.25rem;
+  }
+
+  #profileimage {
+    max-width: 250px;
+  }
+
+  #work img {
+    aspect-ratio: var(--mobileratio);
+  }
+
+  #contactme ul  {
+    justify-content: space-around;
+  }
+
+}
+
+/* Very small screens */
+@media all and (max-width: 325px) {
+  .project {
+    height: 25vh;
+    width: 95vw;
+    flex-basis: 100%;
+    }
+
+  #heroproject.project {
+    height: 50vh;
+  }
+  
+  #work img {
+  object-position: 0%;
   }
 }
