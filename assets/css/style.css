@@ -13,12 +13,14 @@
 body {
   background-color: var(--light);
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
 }
 
 header {
   background-color: var(--accent);
   padding: 0.75rem;
+  flex-grow: 1;
 }
 
 nav {
@@ -44,6 +46,7 @@ main {
   width: 100%;
   margin: 1rem 0;
 }
+
 h1 {
   font-size: 45px;
 }
@@ -68,12 +71,14 @@ section {
 .container {
   border-left: var(--main) solid 4px;
   margin: 1rem 5rem 1rem 0;
+  padding-left: 2rem;
+  display: flex;
+  flex-grow: 1;
 
 }
 
 /* About me section */
 #aboutme .container {
-  display: flex;
   flex-flow: column;
   align-items: center;
 }
@@ -85,14 +90,8 @@ section {
   flex-shrink: 1;
 }
 
-#aboutme .container p {
-  padding-left: 2rem;
-}
-
 /* My work section */
 #work .container {
-  padding-left: 2rem;
-  display: flex;
   flex-grow: 1;
   flex-flow: row wrap;
   justify-content: center;
@@ -107,7 +106,7 @@ section {
 }
 
 #work .container .project {
-  flex: 1 1 50%;
+  max-width: 300px;
 }
 
 #work .container img {
@@ -115,9 +114,13 @@ section {
 }
 
 /* Contact me section */
+#contactme {
+  background-color: black;
+}
+
 #contactme .container {
-  display: flex;
   flex-grow: 1;
+  background-color: aliceblue;
   }
 
 #contactme ul {
@@ -125,11 +128,13 @@ section {
   flex-grow: 1;
   flex-flow: row wrap;
   justify-content: space-around;
+  background-color: darkseagreen;
  }
 
 #contactme li {
-  padding: 0.75rem;
-  border-bottom: var(--main) solid 2.5px;
+  padding: 0.125rem .75rem;
+  margin: .375rem 0rem;
+  border-bottom: var(--main) solid .125rem;
  }
 
 #contactme li a {
@@ -163,25 +168,38 @@ footer {
   h1, h2 {
     text-align: center;
   }
+
+  h2 {
+    margin: 0;
+    padding: .75rem 2rem .5rem 2rem;
+  }
+
   main, #aboutme, #work, #contactme, #contactme ul {
     flex-flow: column wrap;
   }
 
   .container {
     border-left: 0;
-    margin: 1.5rem;
+    padding-left: 0;
+    margin: .25rem 1.5rem 1.5rem 1.5rem;
+    position: relative;
   }
 
-  #aboutme, #aboutme .container p {
-    margin: 0;
-    padding: .25rem;
+  .container:before {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    top: -.75rem;
+    height: 15px;
+    width: 90%;
+    border-bottom: var(--main) solid 4px;
+  }
+
+ section img{
+    margin: 1.5rem;
     }
  
-  #aboutme .container p {
-    text-align: left;
-  } 
-
-  #contactme ul {
+   #contactme ul {
     align-items: center;
   }
 
