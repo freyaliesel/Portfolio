@@ -90,26 +90,33 @@ section {
 }
 
 /* My work section */
-#work .container {
+#work .container, #work a {
   flex-grow: 1;
   flex-flow: row wrap;
-  justify-content: center;
 }
 
-#work .container .project {
-  border: var(--accent) solid 2px;
+#work .container {
+  gap: 1rem;
+  justify-content: space-evenly;
 }
 
-#heroproject {
-  flex: 1 1 70%;
+#work .project {
+  display: flex;
+  border: var(--accent) solid 3px;
 }
 
-#work .container .project {
-  max-width: 300px;
+#heroproject.project {
+  flex: 1 1 100%;
 }
 
-#work .container img {
+.project {
+ flex: 1 1 45%;
+ 
+}
+
+#work img {
   width: 100%;
+  object-fit: cover;
 }
 
 /* Contact me section */
@@ -121,11 +128,11 @@ section {
   display: flex;
   flex-grow: 1;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
  }
 
 #contactme li {
-  padding: 0.125rem 0.75rem;
+  padding: 0.125rem 0.5rem;
   margin: 0.375rem 0rem;
   border-bottom: var(--main) solid 0.125rem;
 }
@@ -147,7 +154,7 @@ footer {
 /* Media querys for responsive design */
 
 /*Medium screens */
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1007px) {
   nav {
     flex-direction: column;
     align-items: center;
@@ -210,7 +217,7 @@ footer {
 }
 
 /* Small screens */
-@media all and (max-width: 300px) {
+@media all and (max-width: 600px) {
   nav li {
     margin: 0.25rem;
   }
