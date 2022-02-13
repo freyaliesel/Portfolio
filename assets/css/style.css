@@ -29,7 +29,6 @@ header {
 }
 
 /* This section heavily influenced by W3 schools responsive Topnav : https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
-
 nav {
   overflow: hidden;
   background-color: var(--darkest);
@@ -57,7 +56,6 @@ nav a.active {
 nav .icon {
   display: none;
 }
-
 /* End of referenced material */
 
 main {
@@ -296,19 +294,19 @@ footer {
 /* Very small screens (portrait phones, less than 576px) */
 @media screen and (max-width: 575.98px) {
   /* More code courtesy W3 schools */
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
+  nav a:not(:first-child) {display: none;}
+  nav a.icon {
     float: right;
     display: block;
   }
 
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  nav.responsive {position: relative;}
+  nav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  nav.responsive a {
     float: none;
     display: block;
     text-align: left;
