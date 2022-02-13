@@ -6,7 +6,7 @@
   --ratio: 16 / 5;
   --mobileratio: 5/2;
   --imgborder: 3rem;
-  }
+}
 
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -48,8 +48,8 @@ nav li:hover {
   background-color: var(--dark);
 }
 
-nav li a:active {       
-  color: grey;    
+nav li a:active {
+  color: grey;
 }
 
 main {
@@ -117,7 +117,7 @@ section {
   display: flex;
   flex: 1 1 45%;
   object-fit: cover;
-  border: var(--accent) solid .5rem;
+  border: var(--accent) solid 0.5rem;
   border-radius: var(--imgborder);
   overflow: hidden;
   position: relative;
@@ -131,37 +131,22 @@ section {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(150deg, var(--main), var(--light));
-  opacity: .85;
-  transition: .5s ease;
-} 
-
-.project:hover::after {
- opacity: 0;
+  opacity: 0.75;
+  transition: 0.5s ease;
 }
 
-#heroproject .content {
-  color: var(--light);
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 0%;
-  left: 12%;
-  background-color: var(--main);
-  padding: .5rem 1.5rem;
-  border-radius: 1.12em;
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
+.project:hover::after {
+  opacity: 0;
 }
 
 .content {
   color: var(--light);
   font-size: 1.5rem;
   position: absolute;
-  bottom: 0;
-  left: 12%;
+  bottom: -20px;
+  left: 80px;
   background-color: var(--main);
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 1.12em;
   white-space: nowrap;
   transform: translate(-50%, -50%);
@@ -170,7 +155,7 @@ section {
 }
 
 .content .language {
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: block;
 }
 
@@ -186,7 +171,7 @@ section {
   width: 100%;
   aspect-ratio: var(--ratio);
   object-fit: cover;
-  }
+}
 
 /* Contact me section */
 #contactme .container {
@@ -221,8 +206,8 @@ footer {
 
 /* Media queries for responsive design */
 
-/*Medium screens */
-@media all and (max-width: 1007px) {
+/* Medium devices (tablets, less than 992px */
+@media all and (max-width: 991.98px) {
   nav {
     flex-direction: column;
     align-items: center;
@@ -284,8 +269,8 @@ footer {
   }
 }
 
-/* Small screens */
-@media all and (max-width: 600px) {
+/* Small devices (landscape phones, less than 768px) */
+@media all and (max-width: 767.98px) {
   nav li {
     margin: 0.25rem;
   }
@@ -298,25 +283,24 @@ footer {
     aspect-ratio: var(--mobileratio);
   }
 
-  #contactme ul  {
+  #contactme ul {
     justify-content: space-around;
   }
-
 }
 
-/* Very small screens */
-@media all and (max-width: 325px) {
+/* Very small screens (portrait phones, less than 576px) */
+@media all and (max-width: 575.98px) {
   .project {
     height: 25vh;
     width: 95vw;
     flex-basis: 100%;
-    }
+  }
 
   #heroproject.project {
     height: 50vh;
   }
-  
+
   #work img {
-  object-position: 0%;
+    object-position: 0%;
   }
 }
