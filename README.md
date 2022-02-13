@@ -9,3 +9,7 @@ Criteria includes:
 * the first application should be larger than the others
 * images of the applications should be active links
 * page should have a responsive layout appropriate for various viewports
+
+
+The portfolio is live at [freyaliesel.github.io/Portfolio/](https://freyaliesel.github.io/Portfolio/ "GitHub Pages")
+![Image of the live page hosted on github](/assets/images/hostedPortfolio.png)
