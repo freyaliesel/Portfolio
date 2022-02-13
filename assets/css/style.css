@@ -293,7 +293,14 @@ footer {
 
   nav li {
    margin: 0;
+   flex-grow: 1;
   }
+
+  nav ul {
+    display: flex;
+    flex-flow: column wrap;
+  }
+ 
 
   .project {
     height: 25vh;
