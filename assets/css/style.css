@@ -290,6 +290,11 @@ footer {
 
 /* Very small screens (portrait phones, less than 576px) */
 @media all and (max-width: 575.98px) {
+
+  nav li {
+   margin: 0;
+  }
+
   .project {
     height: 25vh;
     width: 95vw;
