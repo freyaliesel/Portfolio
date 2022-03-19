@@ -123,6 +123,7 @@ section {
   display: flex;
   flex: 1 1 45%;
   object-fit: cover;
+  object-position: 0 0;
   border: var(--accent) solid 0.5rem;
   border-radius: var(--imgborder);
   overflow: hidden;
@@ -177,6 +178,7 @@ section {
   width: 100%;
   aspect-ratio: var(--ratio);
   object-fit: cover;
+  object-position: 0 0;
 }
 
 /* Contact me section */
