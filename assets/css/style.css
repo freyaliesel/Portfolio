@@ -161,16 +161,21 @@ section {
   z-index: 1;
 }
 
-.content .language {
+.content:hover {
+  text-decoration: underline;
+}
+
+.content > .language {
   font-size: 0.8rem;
   display: block;
+  pointer-events: none;
 }
 
-.project:hover .content {
+/* .project:hover .content {
   opacity: 1;
-}
+} */
 
-#heroproject.project {
+.heroproject.project {
   flex: 1 1 100%;
 }
 
@@ -321,7 +326,7 @@ footer {
     flex-basis: 100%;
   }
 
-  #heroproject.project {
+  .heroproject.project {
     height: 50vh;
   }
 
