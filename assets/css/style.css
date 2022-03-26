@@ -1,336 +1,335 @@
 :root {
-  --main: #6667ab;
-  --accent: #bac89c;
-  --light: #fffaf0;
-  --dark: #454679;
-  --darkest: #333;
-  --ratio: 16 / 5;
-  --mobileratio: 5/2;
-  --imgborder: 3rem;
+    --main: #6667ab;
+    --accent: #bac89c;
+    --light: #fffaf0;
+    --dark: #454679;
+    --darkest: #333;
+    --ratio: 16 / 5;
+    --mobileratio: 5/2;
+    --imgborder: 3rem;
 }
 
 * {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  max-width: 100vw;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    max-width: 100vw;
 }
 
 body {
-  background-color: var(--light);
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
+    background-color: var(--light);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 header {
-  background-color: var(--accent);
-  padding: 0.75rem;
-  flex-grow: 1;
+    background-color: var(--accent);
+    padding: 0.75rem;
+    flex-grow: 1;
 }
 
 /* This section heavily influenced by W3 schools responsive Topnav : https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 nav {
-  overflow: hidden;
-  background-color: var(--darkest);
+    overflow: hidden;
+    background-color: var(--darkest);
 }
 
 nav a {
-  float: left;
-  display: block;
-  color: var(--light);
-  text-align: center;
-  padding: 1rem;
-  text-decoration: none;
+    float: left;
+    display: block;
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
 }
 
 nav a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 nav a.active {
-  background-color: var(--main);
-  color: white;
+    background-color: var(--main);
+    color: white;
 }
 
 nav .icon {
-  display: none;
+    display: none;
 }
 /* End of referenced material */
 
 main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 h1 {
-  font-size: calc(1.2em + 3vw);
+    font-size: calc(1.2em + 3vw);
 }
 
 h2 {
-  color: var(--main);
-  padding: 0.75rem;
-  text-align: right;
-  font-size: calc(1.2em + 1.5vw);
-  flex: 0 0 20%;
+    color: var(--main);
+    padding: 0.75rem;
+    text-align: right;
+    font-size: calc(1.2em + 1.5vw);
+    flex: 0 0 20%;
 }
 
 h3 {
-  font-size: calc(0.8em + 0.5vw);
+    font-size: calc(0.8em + 0.5vw);
 }
 
 section {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .container {
-  border-left: var(--main) solid 4px;
-  margin: 1rem 5rem 1rem 0;
-  padding-left: 2rem;
-  display: flex;
-  flex-grow: 1;
+    border-left: var(--main) solid 4px;
+    margin: 1rem 5rem 1rem 0;
+    padding-left: 2rem;
+    display: flex;
+    flex-grow: 1;
 }
 
 /* About me section */
 #aboutme .container {
-  flex-flow: column;
-  align-items: center;
+    flex-flow: column;
+    align-items: center;
 }
 
 #profileimage {
-  max-width: 300px;
-  border: var(--accent) solid 0.5rem;
-  border-radius: var(--imgborder);
-  flex-shrink: 1;
+    max-width: 300px;
+    border: var(--accent) solid 0.5rem;
+    border-radius: var(--imgborder);
+    flex-shrink: 1;
 }
 
 /* My work section */
 #work .container,
 #work a {
-  flex-grow: 1;
-  flex-flow: row wrap;
+    flex-grow: 1;
+    flex-flow: row wrap;
 }
 
 #work .container {
-  gap: 1rem;
-  justify-content: space-evenly;
+    gap: 1rem;
+    justify-content: space-evenly;
 }
 
 .project {
-  display: flex;
-  flex: 1 1 45%;
-  object-fit: cover;
-  object-position: 0 0;
-  border: var(--accent) solid 0.5rem;
-  border-radius: var(--imgborder);
-  overflow: hidden;
-  position: relative;
+    display: flex;
+    flex: 1 1 45%;
+    object-fit: cover;
+    object-position: 0 0;
+    border: var(--accent) solid 0.5rem;
+    border-radius: var(--imgborder);
+    overflow: hidden;
+    position: relative;
 }
 
 .project::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(150deg, var(--main), var(--light));
-  opacity: 0.75;
-  transition: 0.5s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(150deg, var(--main), var(--light));
+    opacity: 0.75;
+    transition: 0.5s ease;
 }
 
 .project:hover::after {
-  opacity: 0;
+    opacity: 0;
 }
 
 .content {
-  color: var(--light);
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: -20px;
-  left: 80px;
-  background-color: var(--main);
-  padding: 0.5rem 1.5rem;
-  border-radius: 1.12em;
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
+    color: var(--light);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: -20px;
+    left: 80px;
+    background-color: var(--main);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.12em;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
 }
 
 .content:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .content > .language {
-  font-size: 0.8rem;
-  display: block;
-  pointer-events: none;
+    font-size: 0.8rem;
+    display: block;
+    pointer-events: none;
 }
 
-/* .project:hover .content {
-  opacity: 1;
-} */
-
 .heroproject.project {
-  flex: 1 1 100%;
+    flex: 1 1 100%;
 }
 
 #work img {
-  width: 100%;
-  aspect-ratio: var(--ratio);
-  object-fit: cover;
-  object-position: 0 0;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    object-fit: cover;
+    object-position: 0 0;
 }
 
 /* Contact me section */
 #contactme .container {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 #contactme ul {
-  display: flex;
-  flex-grow: 1;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 #contactme li {
-  padding: 0.125rem 0.5rem;
-  margin: 0.375rem 0rem;
+    padding: 0.125rem 0.5rem;
+    margin: 0.375rem 0rem;
 }
 
 #contactme li a {
-  text-decoration: none;
-  color: var(--main);
-  font-weight: bolder;
+    text-decoration: none;
+    color: var(--main);
+    font-weight: bolder;
 }
 
 footer {
-  background-color: var(--main);
-  color: var(--light);
-  padding: 0.75rem;
-  display: flex;
-  justify-content: end;
+    background-color: var(--main);
+    color: var(--light);
+    padding: 0.75rem;
+    display: flex;
+    justify-content: end;
 }
 
 /* Media queries for responsive design */
 
 /* Medium devices (tablets, less than 992px */
 @media all and (max-width: 991.98px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  nav li {
-    margin: 0.5rem;
-  }
+    nav li {
+        margin: 0.5rem;
+    }
 
-  h1,
-  h2 {
-    text-align: center;
-  }
+    h1,
+    h2 {
+        text-align: center;
+    }
 
-  h2 {
-    margin: 1.5rem 0 0 0;
-    padding: 0.75rem 2rem 0.5rem 2rem;
-  }
+    h2 {
+        margin: 1.5rem 0 0 0;
+        padding: 0.75rem 2rem 0.5rem 2rem;
+    }
 
-  main,
-  #aboutme,
-  #work,
-  #contactme,
-  .container {
-    margin: 0;
-  }
+    main,
+    #aboutme,
+    #work,
+    #contactme,
+    .container {
+        margin: 0;
+    }
 
-  #aboutme,
-  #work,
-  #contactme {
-    flex-flow: column wrap;
-  }
+    #aboutme,
+    #work,
+    #contactme {
+        flex-flow: column wrap;
+    }
 
-  .container {
-    margin-top: 1.5rem;
-    border-left: 0;
-    padding-left: 0;
-    flex-grow: 1;
-  }
+    .container {
+        margin-top: 1.5rem;
+        border-left: 0;
+        padding-left: 0;
+        flex-grow: 1;
+    }
 
-  #profileimage {
-    margin: 0 1.5rem 1.5rem 1.5rem;
-  }
+    #profileimage {
+        margin: 0 1.5rem 1.5rem 1.5rem;
+    }
 
-  #aboutme p {
-    margin: 0.5rem 2rem;
-  }
+    #aboutme p {
+        margin: 0.5rem 2rem;
+    }
 
-  #contactme ul {
-    align-items: center;
-  }
+    #contactme ul {
+        align-items: center;
+    }
 
-  #contactme li {
-    margin: 1rem;
-  }
+    #contactme li {
+        margin: 1rem;
+    }
 
-  footer {
-    justify-content: center;
-  }
+    footer {
+        justify-content: center;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
+    #profileimage {
+        max-width: 250px;
+    }
 
-  #profileimage {
-    max-width: 250px;
-  }
+    #work img {
+        aspect-ratio: var(--mobileratio);
+    }
 
-  #work img {
-    aspect-ratio: var(--mobileratio);
-  }
-
-  #contactme ul {
-    justify-content: space-around;
-  }
+    #contactme ul {
+        justify-content: space-around;
+    }
 }
 
 /* Very small screens (portrait phones, less than 576px) */
 @media screen and (max-width: 575.98px) {
-  /* More code courtesy W3 schools */
-  nav a:not(:first-child) {display: none;}
-  nav a.icon {
-    float: right;
-    display: block;
-  }
+    /* More code courtesy W3 schools */
+    nav a:not(:first-child) {
+        display: none;
+    }
+    nav a.icon {
+        float: right;
+        display: block;
+    }
 
-  nav.responsive {position: relative;}
-  nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-/* End referenced material */
+    nav.responsive {
+        position: relative;
+    }
+    nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    /* End referenced material */
 
-   .project {
-    height: 25vh;
-    width: 95vw;
-    flex-basis: 100%;
-  }
+    .project {
+        height: 25vh;
+        width: 95vw;
+        flex-basis: 100%;
+    }
 
-  .heroproject.project {
-    height: 50vh;
-  }
+    .heroproject.project {
+        height: 50vh;
+    }
 
-  #work img {
-    object-position: 0%;
-  }
+    #work img {
+        object-position: 0%;
+    }
 }
