@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>K Glidden Portfolio</title>
-  </head>
-  <body>
-    <header>
-      <h1>K Glidden</h1>
-    </header>
-    
-    <!-- Code for responsive nav bar heavily influenced by W3 Schools, link in CSS file -->
-    <nav class="topnav" id="myTopnav">
-      <a href="#aboutme" class="active">About Me</a>
-      <a href="#work">My Work</a>
-      <a href="#contactme">Contact Me</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </nav>
-    <script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>K Glidden Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <h1>K Glidden</h1>
+  </header>
+
+  <!-- Code for responsive nav bar heavily influenced by W3 Schools, link in CSS file -->
+  <nav class="topnav" id="myTopnav">
+    <a href="#aboutme" class="active">About Me</a>
+    <a href="#work">My Work</a>
+    <a href="#contactme">Contact Me</a>
+    <a href="javascript:void(0);" class="icon" onclick="handleNavbar()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="./assets/files/KGlidden Resume 2022.pdf" download>Resume</a>
+  </nav>
+  <!-- <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -35,107 +35,94 @@
           x.className = "topnav";
         }
       }
-      </script>
-<!-- End of reference material -->
+      </script> -->
+  <!-- End of reference material -->
 
-<main>
-  <section id="aboutme">
-    <h2>About Me</h2>
+  <main>
+    <section id="aboutme">
+      <h2>About Me</h2>
+      <div class="container">
+        <img id="profileimage" src="./assets/images/profileimage.png" alt="picture of Ms Glidden, smiling" />
+        <p>
+          Hi I'm Kit, and I'm an aspiring developer! I've spent my life on
+          computers, and it only makes sense to me that I would take a crack at
+          making a living programming applications for them. I'm taking
+          Northwestern University's Coding Bootcamp in an effort to make a career
+          change.
+        </p>
+        <p>
+          My professional history has seen me spend nearly two decades in roles
+          for various food service and retail employers. During this time, I've
+          volunteered in managerial capacities for several non-profits and
+          religious organizations. Additionally, I own and administrate a Discord
+          server for a community comprising over 17,000 members.
+        </p>
+        <p>
+          On a more personal level, I'm originally from Fairfax, Virginia. I currently
+          live in Chicago with my 11 year old Sphynx cat, William, and he likes to yell at
+          me loudly while I do homework or try to relax. I spend my free time playing
+          video games, watching tv series with my friends in a club we've had going for
+          nearly two years, and I recently started a Gloomhaven campaign!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <section id="work">
+    <h2>Work</h2>
     <div class="container">
-      <img
-        id="profileimage"
-        src="./assets/images/profileimage.png"
-        alt="picture of Ms Glidden, smiling"
-      />
-      <p>
-        Hi I'm Kit, and I'm an aspiring developer! I've spent my life on
-        computers, and it only makes sense to me that I would take a crack at
-        making a living programming applications for them. I'm taking
-        Northwestern University's Coding Bootcamp in an effort to make a career
-        change.
-      </p>
-      <p>
-        My professional history has seen me spend nearly two decades in roles
-        for various food service and retail employers. During this time, I've
-        volunteered in managerial capacities for several non-profits and
-        religious organizations. Additionally, I own and administrate a Discord
-        server for a community comprising over 16,000 members.
-      </p>
-      <p>
-        On a more personal level, I'm originally from Fairfax, Virginia. I currently
-        live in Chicago with my 11 year old Sphynx cat, William, and he likes to yell at
-        me loudly while I do homework or try to relax. I spend my free time playing
-        video games, watching tv series with my friends in a club we've had going for
-        nearly two years, and I recently started a Gloomhaven campaign!
-      </p>
-    </div>
-  </section>
-</main>
+      <a id="dately" class="heroproject project" href="">
+        <div id="herocontent" class="content">Dately<span class="language">Javascript/HTML/CSS</span></div>
+        <img src="./assets/images/Dately.png" alt="preview image of the web app Dately" />
+      </a>
+      <a id="manyfest" class="project" href="">
+        <div class="content">Manyfest<span class="language">Javascript/Handlebars</span></div>
+        <img src="./assets/images/manyfest.png" alt="preview image of a game made in scratch" />
+      </a>
+      <a id="weather" class="project" href="">
+        <div class="content"> Weather<span class="language">Javascript/HTML/CSS</span></div>
+        <img src="./assets/images/weather-dashboard.png" alt="preview image of a weather dashboard web app" />
+      </a>
+      <a id="scheduler" class="project" href="">
+        <div class="content">Scheduler<span class="language">Javascript/HTML</span></div>
+        <img src="./assets/images/worday-scheduler.png" alt="preview image of a worday schedule web app" />
+      </a>
+      <a id="quiz" class="project" href="">
+        <div class="content">Code Quiz<span class="language">Javascript</span></div>
 
-      <section id="work">
-        <h2>Work</h2>
-        <div class="container">
-          <a id="dately" class="heroproject project" href=""
-              >
-              <div id="herocontent" class="content">Dately<span class="language">Javascript/HTML/CSS</span></div>             
-              <img
-                src="./assets/images/Dately.png"
-                alt="preview image of the web app Dately"
-          /></a>                         
-            <a id="weather" class="project" href=""
-              >
-              <div class="content"> Weather<span class="language">Javascript/HTML/CSS</span></div>
-              <img
-                src="./assets/images/weather-dashboard.png"
-                alt="preview image of a weather dashboard web app"
-            /></a>                
-            <a id="scheduler" class="project" href=""
-              >
-              <div class="content">Scheduler<span class="language">Javascript/HTML</span></div>             
-              <img
-                src="./assets/images/worday-scheduler.png"
-                alt="preview image of a worday schedule web app"
-            /></a>
-            <a id="quiz" class="project" href=""
-              >
-                <div class="content">Code Quiz<span class="language">Javascript</span></div>
+        <img src="./assets/images/code-quiz.png" alt="placeholder image from picsum" />
+      </a>
 
-              <img
-                src="./assets/images/code-quiz.png"
-                alt="placeholder image from picsum"
-            /></a>
-            
-            <a id="scratch" class="project" href=""
+      <!-- <a id="scratch" class="project" href=""
             >
             <div class="content">Memory<span class="language">Scratch</span></div>
             <img
               src="./assets/images/memorygame.png"
               alt="preview image of a game made in scratch"
-          /></a>
-        </div>
-      </section>
+          /></a> -->
+    </div>
+  </section>
 
-      <section id="contactme">
-        <h2>Contact Me</h2>
-        <div class="container">
-          <ul>
-            <li><a href="tel:+13127678068">1·312·767·8068</a></li>
-            <li>
-              <a href="mailto:freyacodes@gmail.com"
-                >freyacodes@gmail.com</a
-              >
-            </li>
-            <li><a href="https://github.com/freyaliesel">GitHub</a></li>
-            <li>
-              <a href="https://www.linkedin.com/in/kelsea-glidden-907490126/"
-                >LinkedIn</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer><h3>©2022 K Glidden</h></footer>
-  </body>
-  <script src="./assets/script.js"></script>
+  <section id="contactme">
+    <h2>Contact Me</h2>
+    <div class="container">
+      <ul>
+        <li><a href="tel:+13127678068">1·312·767·8068</a></li>
+        <li>
+          <a href="mailto:freyacodes@gmail.com">freyacodes@gmail.com</a>
+        </li>
+        <li><a href="https://github.com/freyaliesel">GitHub</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/kelsea-glidden-907490126/">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <h3>©2022 K Glidden</h>
+  </footer>
+</body>
+<script src="./assets/script.js"></script>
+
 </html>

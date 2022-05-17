@@ -1,9 +1,23 @@
+function handleNavbar() {
+    var nav = document.getElementById("myTopnav");
+    if (nav.className === "topnav") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "topnav";
+    }
+}
+
 function redirect(target) {
     const projects = [
         {
             name: "dately",
             repo: "https://github.com/GitGals/Dately",
             live: "https://gitgals.github.io/Dately/",
+        },
+        {
+            name: "manyfest",
+            repo: "https://github.com/P2T2-KGJ/ManyFest",
+            live: "https://manyfestapp.herokuapp.com/",
         },
         {
             name: "weather",
@@ -20,11 +34,11 @@ function redirect(target) {
             repo: "https://github.com/freyaliesel/Code-Quiz",
             live: "https://freyaliesel.github.io/Code-Quiz/",
         },
-        {
-            name: "scratch",
-            repo: "https://scratch.mit.edu/projects/497157717/editor/",
-            live: "https://scratch.mit.edu/projects/497157717/",
-        },
+        // {
+        //     name: "scratch",
+        //     repo: "https://scratch.mit.edu/projects/497157717/editor/",
+        //     live: "https://scratch.mit.edu/projects/497157717/",
+        // },
     ];
     if (target.className.includes("content")) {
         let parent = target.closest("a");
