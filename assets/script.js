@@ -10,6 +10,11 @@ function handleNavbar() {
 function redirect(target) {
     const projects = [
         {
+            name: "GetOnBoard",
+            repo: "https://github.com/P3T1-StaleMates/GetOnBoard",
+            live: "https://p3-getonboard.herokuapp.com/",
+        },
+        {
             name: "dately",
             repo: "https://github.com/GitGals/Dately",
             live: "https://gitgals.github.io/Dately/",
@@ -29,11 +34,11 @@ function redirect(target) {
             repo: "https://github.com/freyaliesel/Work-Day-Scheduler",
             live: "https://freyaliesel.github.io/Work-Day-Scheduler/",
         },
-        {
-            name: "quiz",
-            repo: "https://github.com/freyaliesel/Code-Quiz",
-            live: "https://freyaliesel.github.io/Code-Quiz/",
-        },
+        // {
+        //     name: "quiz",
+        //     repo: "https://github.com/freyaliesel/Code-Quiz",
+        //     live: "https://freyaliesel.github.io/Code-Quiz/",
+        // },
         // {
         //     name: "scratch",
         //     repo: "https://scratch.mit.edu/projects/497157717/editor/",
